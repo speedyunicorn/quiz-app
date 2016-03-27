@@ -9,19 +9,24 @@
 import Foundation
 
 class QuizManager {
-
-    var easyMode = 0
-    var normalMode = 1
-    var hardMode = 2
     
-//    var quizes = Set<[Quiz]>(3)
-    
-    
-    init(easyQuizes: [Quiz], normalQuizes: [Quiz], hardQuizes: [Quiz]) {
-//        self.quizes[easyMode] = easyQ
-    
+    enum Mode: Int {
+        case Easy = 0
+        case Normal = 1
+        case Hard = 2
     }
     
+    private var currentMode: Mode = Mode.Easy
+
+    static let sharedQuizManager = QuizManager()
     
-//    func getNext
+    func setMode(mode: Mode) {
+        currentMode = mode
+        print("currentMode = \(currentMode)")
+    }
+    
+    func getMode() -> Mode {
+        return currentMode
+    }
+    
 }

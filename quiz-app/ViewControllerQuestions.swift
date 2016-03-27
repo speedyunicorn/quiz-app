@@ -10,13 +10,24 @@ import UIKit
 
 class ViewControllerQuestions: UIViewController {
     
+    
     @IBOutlet weak var labelMode: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // if ()
+        // let cMode = QuizManager.sharedQuizManager.getMode
+        
+        
+        switch QuizManager.sharedQuizManager.getMode() {
+            case .Easy:
+                labelMode.text = "Easy Mode"
+            case .Normal:
+                labelMode.text = "Normal Mode"
+            case .Hard:
+                labelMode.text = "Hard Mode"
+        }
         
     }
     

@@ -17,16 +17,31 @@ class ViewControllerMain: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("viewDidLoad - ViewControllerMain..")
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print ("segue.identifier = \(segue.identifier)")
+        
+        switch segue.identifier! {
+            case "modeEasy":
+                QuizManager.sharedQuizManager.setMode(QuizManager.Mode.Easy)
+            case "modeNormal":
+                QuizManager.sharedQuizManager.setMode(QuizManager.Mode.Normal)
+            case "modeHard":
+                QuizManager.sharedQuizManager.setMode(QuizManager.Mode.Hard)
+            default:
+                QuizManager.sharedQuizManager.setMode(QuizManager.Mode.Easy)
+        }
+        
+        
     }
 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
 
 
