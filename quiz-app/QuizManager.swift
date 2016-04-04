@@ -7,13 +7,16 @@
 //
 
 import Foundation
+import ObjectMapper
 
 class QuizManager {
+    var quizArray: [Quiz]?
     
-    enum Mode: Int {
-        case Easy = 0
-        case Normal = 1
-        case Hard = 2
+    
+    enum Mode: String {
+        case Easy = "easy"
+        case Normal = "normal"
+        case Hard = "hard"
     }
     
     private var currentMode: Mode = Mode.Easy
@@ -27,6 +30,51 @@ class QuizManager {
     
     func getMode() -> Mode {
         return currentMode
+    }
+    
+    func initQuizFromLocalJSONFile() {
+        print(NSBundle.mainBundle().bundlePath)
+        
+        if let filepath = NSBundle.mainBundle().pathForResource ("quiz.json", ofType: nil) {
+            do {
+            let content = try NSString(contentsOfFile: filepath, usedEncoding: nil) as String
+                // print(content)
+                quizArray = Mapper<Quiz>().mapArray(content)
+                
+                print(quizArray!.capacity)
+                
+            } catch {
+                print("cannot read content")
+            }
+        } else {
+            print("file not found")
+        }
+    }
+    
+    func generateTestJSON(numberOfElement: Int) -> String {
+        var q = [Quiz]()
+        
+        for _ in 0...numberOfElement {
+            let ans = [Answer](
+                arrayLiteral: Answer(text: "Answer 1", isCorrect: false),
+                Answer(text: "Answer 2", isCorrect: true),
+                Answer(text: "Answer 3", isCorrect: false)
+            )
+            
+            //            ans.append(Answer(text: "Answer 1", isCorrect: false))
+            //            ans.append(Answer(text: "Answer 2", isCorrect: true))
+            //            ans.append(Answer(text: "Answer 3", isCorrect: false))
+            
+            let qz = Quiz(mode: Mode.Easy, question: "Test question?", answers: ans)
+            
+            q.append(qz)
+        }
+        
+        let JSONString = Mapper().toJSONString(q, prettyPrint: true)
+        
+        print(JSONString)
+        
+        return JSONString!
     }
     
 }

@@ -2,6 +2,9 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+# Not allowing to commit JSON files, to avoid exposing data on GitHub
+*.json
+
 ## Build generated
 build/
 DerivedData

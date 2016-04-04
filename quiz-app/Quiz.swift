@@ -7,21 +7,39 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class Quiz {
-    var questionText: String
-    var answers: [String]
-    
-    init(question: String, answers: [String] ) {
-        self.questionText = question
+class Quiz: Mappable {
+    var mode: QuizManager.Mode?
+    var text: String?
+    var answers: [Answer]?
+
+    init(mode: QuizManager.Mode, question: String, answers: [Answer] ) {
+        self.mode = mode
+        self.text = question
         self.answers = answers
     }
     
-    func getQuestionText() -> String {
-        return self.questionText
+    required init?(_ map: Map) {
+        
     }
     
-    func getAnswers() -> [String] {
-        return self.answers
+    func mapping(map: Map) {
+        mode <- map["mode"]
+        text <- map["text"]
+        answers <- map["answers"]
+        
+    }
+    
+    func getMode() -> QuizManager.Mode {
+        return self.mode!
+    }
+    
+    func getText() -> String {
+        return self.text!
+    }
+    
+    func getAnswers() -> [Answer] {
+        return self.answers!
     }
 }
