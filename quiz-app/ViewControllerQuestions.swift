@@ -12,6 +12,10 @@ class ViewControllerQuestions: UIViewController {
     
     
     @IBOutlet weak var labelMode: UILabel!
+    @IBOutlet weak var labelQuestion: UILabel!
+    @IBOutlet weak var buttonAnswer0: UIButton!
+    @IBOutlet weak var buttonAnswer1: UIButton!
+    @IBOutlet weak var buttonAnswer2: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,7 @@ class ViewControllerQuestions: UIViewController {
         switch QuizManager.sharedQuizManager.getMode() {
             case .Easy:
                 labelMode.text = "Easy Mode"
+                
             case .Normal:
                 labelMode.text = "Normal Mode"
             case .Hard:
@@ -30,6 +35,12 @@ class ViewControllerQuestions: UIViewController {
         }
         
     }
+    
+    @IBAction func answerButtonTouched(sender: AnyObject) {
+        print(sender.identifier!)
+    
+    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Check segue identifier and set label to correct value

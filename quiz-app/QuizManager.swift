@@ -33,7 +33,7 @@ class QuizManager {
     }
     
     func initQuizFromLocalJSONFile() {
-        print(NSBundle.mainBundle().bundlePath)
+        // print(NSBundle.mainBundle().bundlePath)
         
         if let filepath = NSBundle.mainBundle().pathForResource ("quiz.json", ofType: nil) {
             do {
@@ -41,7 +41,7 @@ class QuizManager {
                 // print(content)
                 quizArray = Mapper<Quiz>().mapArray(content)
                 
-                print(quizArray!.capacity)
+                // print(quizArray!.capacity)
                 
             } catch {
                 print("cannot read content")

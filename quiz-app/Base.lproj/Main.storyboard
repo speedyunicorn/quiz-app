@@ -3,7 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller Main-->
@@ -76,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIu-nA-TQX">
-                                <rect key="frame" x="278.5" y="70" width="43.5" height="21"/>
+                                <rect key="frame" x="278.5" y="25" width="43.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -88,17 +90,64 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" identifier="backToMain" id="lFP-7H-RCf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2i-iA-ZXI">
+                                <rect key="frame" x="137.5" y="96" width="325" height="135.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYQ-cK-WA3">
+                                <rect key="frame" x="277" y="361.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="answerButtonTouched:" destination="xVm-Rw-9Rg" eventType="touchUpInside" id="qMX-Ol-Vgs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-xs-Ea4">
+                                <rect key="frame" x="277" y="441.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="answerButtonTouched:" destination="xVm-Rw-9Rg" eventType="touchUpInside" id="JuY-kd-3An"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOZ-nV-oCV">
+                                <rect key="frame" x="277" y="281.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="answerButtonTouched:" destination="xVm-Rw-9Rg" eventType="touchUpInside" id="f0e-Dt-Ezr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zOZ-nV-oCV" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="42P-xC-f3U"/>
+                            <constraint firstItem="eCv-xs-Ea4" firstAttribute="top" secondItem="xYQ-cK-WA3" secondAttribute="bottom" constant="50" id="7fQ-gG-oBX"/>
+                            <constraint firstItem="w2i-iA-ZXI" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="C3V-FO-YCv"/>
                             <constraint firstItem="qIu-nA-TQX" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="DIJ-zO-pkO"/>
+                            <constraint firstItem="eCv-xs-Ea4" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="KgO-qg-vq6"/>
                             <constraint firstAttribute="leadingMargin" secondItem="v3j-Ys-fp8" secondAttribute="leading" constant="5" id="MDZ-jw-Fii"/>
-                            <constraint firstItem="qIu-nA-TQX" firstAttribute="top" secondItem="hBd-a0-c0N" secondAttribute="bottom" constant="50" id="b7e-zU-TTS"/>
+                            <constraint firstItem="w2i-iA-ZXI" firstAttribute="width" relation="greaterThanOrEqual" secondItem="gnr-Vu-LXv" secondAttribute="height" multiplier="7:100" constant="250" id="MMA-6p-FDu"/>
+                            <constraint firstItem="w2i-iA-ZXI" firstAttribute="width" relation="greaterThanOrEqual" secondItem="gnr-Vu-LXv" secondAttribute="width" multiplier="1:8" constant="250" id="Qaq-tU-IvM"/>
+                            <constraint firstItem="w2i-iA-ZXI" firstAttribute="height" secondItem="gnr-Vu-LXv" secondAttribute="height" multiplier="1:7" constant="50" id="abH-MG-u0P"/>
+                            <constraint firstItem="qIu-nA-TQX" firstAttribute="top" secondItem="hBd-a0-c0N" secondAttribute="bottom" constant="5" id="b7e-zU-TTS"/>
+                            <constraint firstItem="xYQ-cK-WA3" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="cTO-jt-Q9M"/>
+                            <constraint firstItem="w2i-iA-ZXI" firstAttribute="top" secondItem="qIu-nA-TQX" secondAttribute="bottom" constant="50" id="oeN-Ut-avv"/>
                             <constraint firstItem="v3j-Ys-fp8" firstAttribute="top" secondItem="hBd-a0-c0N" secondAttribute="bottom" constant="5" id="pDb-Rk-ePD"/>
+                            <constraint firstItem="xYQ-cK-WA3" firstAttribute="top" secondItem="zOZ-nV-oCV" secondAttribute="bottom" constant="50" id="swh-jR-4Gy"/>
+                            <constraint firstItem="zOZ-nV-oCV" firstAttribute="top" secondItem="w2i-iA-ZXI" secondAttribute="bottom" constant="50" id="vZI-Et-M5X"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MMA-6p-FDu"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="buttonAnswer0" destination="zOZ-nV-oCV" id="0DD-e9-NG4"/>
+                        <outlet property="buttonAnswer1" destination="xYQ-cK-WA3" id="Nr5-xd-q0D"/>
+                        <outlet property="buttonAnswer2" destination="eCv-xs-Ea4" id="MQE-UW-ZaT"/>
                         <outlet property="labelMode" destination="qIu-nA-TQX" id="Znl-Ur-aM3"/>
+                        <outlet property="labelQuestion" destination="w2i-iA-ZXI" id="2fD-5l-Lv1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bE0-I8-mXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
