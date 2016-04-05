@@ -17,27 +17,36 @@ class ViewControllerQuestions: UIViewController {
     @IBOutlet weak var buttonAnswer1: UIButton!
     @IBOutlet weak var buttonAnswer2: UIButton!
     
+    var currentQuiz: Quiz?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         // let cMode = QuizManager.sharedQuizManager.getMode
         
+        currentQuiz = QuizManager.sharedQuizManager.getQuiz()
         
         switch QuizManager.sharedQuizManager.getMode() {
             case .Easy:
                 labelMode.text = "Easy Mode"
-                
             case .Normal:
                 labelMode.text = "Normal Mode"
             case .Hard:
                 labelMode.text = "Hard Mode"
         }
         
+        labelQuestion.text = currentQuiz?.getText()
+        
+        buttonAnswer0.setTitle(currentQuiz?.answers?[0].text, forState: UIControlState.Normal)
+        buttonAnswer1.setTitle(currentQuiz?.answers?[1].text, forState: UIControlState.Normal)
+        buttonAnswer2.setTitle(currentQuiz?.answers?[2].text, forState: UIControlState.Normal)
+        
     }
     
     @IBAction func answerButtonTouched(sender: AnyObject) {
-        print(sender.identifier!)
+        // print(sender.identifier!)
+        
     
     }
     

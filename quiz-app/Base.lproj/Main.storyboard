@@ -90,12 +90,6 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" identifier="backToMain" id="lFP-7H-RCf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2i-iA-ZXI">
-                                <rect key="frame" x="137.5" y="96" width="325" height="135.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYQ-cK-WA3">
                                 <rect key="frame" x="277" y="361.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
@@ -117,6 +111,12 @@
                                     <action selector="answerButtonTouched:" destination="xVm-Rw-9Rg" eventType="touchUpInside" id="f0e-Dt-Ezr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2i-iA-ZXI">
+                                <rect key="frame" x="138" y="96" width="325" height="135.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -127,7 +127,7 @@
                             <constraint firstItem="eCv-xs-Ea4" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="KgO-qg-vq6"/>
                             <constraint firstAttribute="leadingMargin" secondItem="v3j-Ys-fp8" secondAttribute="leading" constant="5" id="MDZ-jw-Fii"/>
                             <constraint firstItem="w2i-iA-ZXI" firstAttribute="width" relation="greaterThanOrEqual" secondItem="gnr-Vu-LXv" secondAttribute="height" multiplier="7:100" constant="250" id="MMA-6p-FDu"/>
-                            <constraint firstItem="w2i-iA-ZXI" firstAttribute="width" relation="greaterThanOrEqual" secondItem="gnr-Vu-LXv" secondAttribute="width" multiplier="1:8" constant="250" id="Qaq-tU-IvM"/>
+                            <constraint firstItem="w2i-iA-ZXI" firstAttribute="width" secondItem="gnr-Vu-LXv" secondAttribute="width" multiplier="1:8" constant="250" id="Qaq-tU-IvM"/>
                             <constraint firstItem="w2i-iA-ZXI" firstAttribute="height" secondItem="gnr-Vu-LXv" secondAttribute="height" multiplier="1:7" constant="50" id="abH-MG-u0P"/>
                             <constraint firstItem="qIu-nA-TQX" firstAttribute="top" secondItem="hBd-a0-c0N" secondAttribute="bottom" constant="5" id="b7e-zU-TTS"/>
                             <constraint firstItem="xYQ-cK-WA3" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="cTO-jt-Q9M"/>

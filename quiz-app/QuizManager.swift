@@ -76,5 +76,18 @@ class QuizManager {
         
         return JSONString!
     }
-    
+  
+    func getQuiz() -> Quiz {
+        var currentQuiz = Quiz(mode: QuizManager.Mode.Easy, question: "Empty?", answers: [Answer](arrayLiteral: Answer(text: "Answer!", isCorrect: true)))
+        
+        for quiz in quizArray! {
+            if quiz.getMode() == currentMode {
+                print(quiz.getMode())
+                currentQuiz = quiz
+                break
+            }
+        }
+        
+        return currentQuiz
+    }
 }
