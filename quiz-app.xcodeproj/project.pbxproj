@@ -21,6 +21,7 @@
 		7AB1BD4D1CB0DBFA00C1E7A0 /* quiz.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AB1BD4C1CB0DBFA00C1E7A0 /* quiz.json */; };
 		7ACC1A121C913C07006F9FDE /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC1A111C913C07006F9FDE /* QuizManager.swift */; };
 		7ACC1A141C913FF1006F9FDE /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC1A131C913FF1006F9FDE /* Quiz.swift */; };
+		7ADE72B41CB83EB800568F61 /* QuizUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE72B31CB83EB800568F61 /* QuizUIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		7AB1BD4C1CB0DBFA00C1E7A0 /* quiz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = quiz.json; path = resources/quiz.json; sourceTree = "<group>"; };
 		7ACC1A111C913C07006F9FDE /* QuizManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		7ACC1A131C913FF1006F9FDE /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		7ADE72B31CB83EB800568F61 /* QuizUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizUIButton.swift; sourceTree = "<group>"; };
 		886D37FE99A30A0C1F2F9177 /* Pods-quiz-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quiz-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quiz-app/Pods-quiz-app.debug.xcconfig"; sourceTree = "<group>"; };
 		8D6D2132472813FE4D2FDBFB /* Pods_quiz_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quiz_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A223EDBDABF843E12E70AFA3 /* Pods-quiz-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quiz-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-quiz-app/Pods-quiz-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				7AB1BD4A1CB0C1E000C1E7A0 /* Answer.swift */,
 				7ACC1A111C913C07006F9FDE /* QuizManager.swift */,
 				7ACC1A131C913FF1006F9FDE /* Quiz.swift */,
+				7ADE72B31CB83EB800568F61 /* QuizUIButton.swift */,
 			);
 			path = "quiz-app";
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ADE72B41CB83EB800568F61 /* QuizUIButton.swift in Sources */,
 				7A493EFD1C87FE1800B0534C /* ViewControllerMain.swift in Sources */,
 				7ACC1A121C913C07006F9FDE /* QuizManager.swift in Sources */,
 				7ACC1A141C913FF1006F9FDE /* Quiz.swift in Sources */,

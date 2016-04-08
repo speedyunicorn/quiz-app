@@ -80,13 +80,22 @@ class QuizManager {
     func getQuiz() -> Quiz {
         var currentQuiz = Quiz(mode: QuizManager.Mode.Easy, question: "Empty?", answers: [Answer](arrayLiteral: Answer(text: "Answer!", isCorrect: true)))
         
-        for quiz in quizArray! {
-            if quiz.getMode() == currentMode {
-                print(quiz.getMode())
-                currentQuiz = quiz
+        for index in 0...quizArray!.count - 1 {
+            print(quizArray![index].getMode())
+            if quizArray![index].getMode() == currentMode {
+                currentQuiz = quizArray![index]
+                quizArray!.removeAtIndex(index)
                 break
             }
         }
+        
+//        for quiz in quizArray! {
+//            if quiz.getMode() == currentMode {
+//                print(quiz.getMode())
+//                currentQuiz = quiz
+//                break
+//            }
+//        }
         
         return currentQuiz
     }
