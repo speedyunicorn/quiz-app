@@ -10,8 +10,8 @@ import Foundation
 import ObjectMapper
 
 class QuizManager {
-    var quizArray: [Quiz]?
-    
+    private var quizArray: [Quiz]?
+    private var score = 0
     
     enum Mode: String {
         case Easy = "easy"
@@ -24,12 +24,12 @@ class QuizManager {
     static let sharedQuizManager = QuizManager()
     
     func setMode(mode: Mode) {
-        currentMode = mode
+        self.currentMode = mode
         print("currentMode = \(currentMode)")
     }
     
     func getMode() -> Mode {
-        return currentMode
+        return self.currentMode
     }
     
     func initQuizFromLocalJSONFile() {
@@ -51,52 +51,35 @@ class QuizManager {
         }
     }
     
-    func generateTestJSON(numberOfElement: Int) -> String {
-        var q = [Quiz]()
-        
-        for _ in 0...numberOfElement {
-            let ans = [Answer](
-                arrayLiteral: Answer(text: "Answer 1", isCorrect: false),
-                Answer(text: "Answer 2", isCorrect: true),
-                Answer(text: "Answer 3", isCorrect: false)
-            )
-            
-            //            ans.append(Answer(text: "Answer 1", isCorrect: false))
-            //            ans.append(Answer(text: "Answer 2", isCorrect: true))
-            //            ans.append(Answer(text: "Answer 3", isCorrect: false))
-            
-            let qz = Quiz(mode: Mode.Easy, question: "Test question?", answers: ans)
-            
-            q.append(qz)
-        }
-        
-        let JSONString = Mapper().toJSONString(q, prettyPrint: true)
-        
-        print(JSONString)
-        
-        return JSONString!
-    }
-  
-    func getQuiz() -> Quiz {
-        var currentQuiz = Quiz(mode: QuizManager.Mode.Easy, question: "Empty?", answers: [Answer](arrayLiteral: Answer(text: "Answer!", isCorrect: true)))
+    
+    func getNextQuiz() -> Quiz? {
+        var nextQuiz: Quiz?
         
         for index in 0...quizArray!.count - 1 {
             print(quizArray![index].getMode())
             if quizArray![index].getMode() == currentMode {
-                currentQuiz = quizArray![index]
+                nextQuiz = quizArray![index]
                 quizArray!.removeAtIndex(index)
                 break
             }
         }
         
-//        for quiz in quizArray! {
-//            if quiz.getMode() == currentMode {
-//                print(quiz.getMode())
-//                currentQuiz = quiz
-//                break
-//            }
-//        }
-        
-        return currentQuiz
+        return nextQuiz
     }
+    
+    
+    func getScore() -> Int {
+        return self.score
+    }
+    
+    func increaseScore() {
+        self.score += 1
+    }
+    
+    func initNewGame() {
+        self.score = 0
+        self.quizArray?.removeAll()
+        initQuizFromLocalJSONFile()
+    }
+    
 }

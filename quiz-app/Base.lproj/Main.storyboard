@@ -148,16 +148,17 @@
                         <outlet property="buttonAnswer2" destination="eCv-xs-Ea4" id="MQE-UW-ZaT"/>
                         <outlet property="labelMode" destination="qIu-nA-TQX" id="Znl-Ur-aM3"/>
                         <outlet property="labelQuestion" destination="w2i-iA-ZXI" id="2fD-5l-Lv1"/>
+                        <segue destination="pWp-xi-qrW" kind="showDetail" identifier="toScore" id="1GM-kV-Mgq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bE0-I8-mXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072" y="941"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Score-->
         <scene sceneID="rCm-Ll-nva">
             <objects>
-                <viewController id="pWp-xi-qrW" sceneMemberID="viewController">
+                <viewController id="pWp-xi-qrW" customClass="ViewControllerScore" customModule="quiz_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KKO-km-HHp"/>
                         <viewControllerLayoutGuide type="bottom" id="0ZZ-ab-trV"/>
@@ -166,19 +167,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTU-I0-kWC">
-                                <rect key="frame" x="20" y="20" width="71" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTU-I0-kWC">
+                                <rect key="frame" x="15" y="25" width="71" height="30"/>
                                 <state key="normal" title="&lt; Go Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" identifier="backToMain" id="qWL-8d-zHx"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unJ-1W-SGN">
-                                <rect key="frame" x="150" y="175" width="300" height="143"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unJ-1W-SGN">
+                                <rect key="frame" x="0.5" y="170" width="600" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UTU-I0-kWC" firstAttribute="top" secondItem="KKO-km-HHp" secondAttribute="bottom" constant="5" id="8Pd-Mo-rbH"/>
+                            <constraint firstItem="unJ-1W-SGN" firstAttribute="top" secondItem="KKO-km-HHp" secondAttribute="bottom" constant="150" id="OqF-uf-ttm"/>
+                            <constraint firstItem="unJ-1W-SGN" firstAttribute="centerX" secondItem="wBc-Fs-foS" secondAttribute="centerX" id="tyd-4f-Oov"/>
+                            <constraint firstItem="unJ-1W-SGN" firstAttribute="width" secondItem="wBc-Fs-foS" secondAttribute="width" id="vsj-CO-iH8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UTU-I0-kWC" secondAttribute="leading" constant="5" id="xEl-0U-wJA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelScore" destination="unJ-1W-SGN" id="CRT-kh-dUe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVn-P3-Pi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,6 +200,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="qWL-8d-zHx"/>
         <segue reference="Ta7-lQ-2Cv"/>
     </inferredMetricsTieBreakers>
 </document>

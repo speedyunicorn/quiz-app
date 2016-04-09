@@ -22,17 +22,19 @@ class ViewControllerQuestions: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        getNextQuiz()
+        getNextQuizForCurrentMode()
     }
     
     @IBAction func answerButtonTouched(sender: AnyObject) {
         if let button = sender as? QuizUIButton{
-            print(button.getIsCorrect())
             // Check if correct answer (button) touched and increase score
-            
+            if button.getIsCorrect() {
+                // score = score + 1
+                QuizManager.sharedQuizManager.increaseScore()
+            }
         }
         
-        getNextQuiz()
+        getNextQuizForCurrentMode()
     }
     
     
@@ -47,28 +49,33 @@ class ViewControllerQuestions: UIViewController {
         // Dispose of any resources that can be recreated.
     }
   
-    func getNextQuiz() {
-        currentQuiz = QuizManager.sharedQuizManager.getQuiz()
+    func getNextQuizForCurrentMode() {
+        if let currentQuiz = QuizManager.sharedQuizManager.getNextQuiz() as Quiz! {
+            switch QuizManager.sharedQuizManager.getMode() {
+                case .Easy:
+                    labelMode.text = "Easy Mode"
+                case .Normal:
+                    labelMode.text = "Normal Mode"
+                case .Hard:
+                    labelMode.text = "Hard Mode"
+            }
         
-        switch QuizManager.sharedQuizManager.getMode() {
-        case .Easy:
-            labelMode.text = "Easy Mode"
-        case .Normal:
-            labelMode.text = "Normal Mode"
-        case .Hard:
-            labelMode.text = "Hard Mode"
+            labelQuestion.text = currentQuiz.getText()
+        
+            buttonAnswer0.setTitle(currentQuiz.answers?[0].text, forState: UIControlState.Normal)
+            buttonAnswer0.setIsCorrect((currentQuiz.answers?[0].isCorrect)!)
+        
+            buttonAnswer1.setTitle(currentQuiz.answers?[1].text, forState: UIControlState.Normal)
+            buttonAnswer1.setIsCorrect((currentQuiz.answers?[1].isCorrect)!)
+        
+            buttonAnswer2.setTitle(currentQuiz.answers?[2].text, forState: UIControlState.Normal)
+            buttonAnswer2.setIsCorrect((currentQuiz.answers?[2].isCorrect)!)
         }
-        
-        labelQuestion.text = currentQuiz?.getText()
-        
-        buttonAnswer0.setTitle(currentQuiz?.answers?[0].text, forState: UIControlState.Normal)
-        buttonAnswer0.setIsCorrect((currentQuiz?.answers?[0].isCorrect)!)
-        
-        buttonAnswer1.setTitle(currentQuiz?.answers?[1].text, forState: UIControlState.Normal)
-        buttonAnswer1.setIsCorrect((currentQuiz?.answers?[1].isCorrect)!)
-        
-        buttonAnswer2.setTitle(currentQuiz?.answers?[2].text, forState: UIControlState.Normal)
-        buttonAnswer2.setIsCorrect((currentQuiz?.answers?[2].isCorrect)!)
+        else {
+            // No question left, go to the final score
+            self.performSegueWithIdentifier("toScore", sender: self)
+            
+        }
     }
     
 }
