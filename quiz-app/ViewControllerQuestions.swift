@@ -33,14 +33,13 @@ class ViewControllerQuestions: UIViewController {
                 QuizManager.sharedQuizManager.increaseScore()
             }
         }
-        
         getNextQuizForCurrentMode()
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Check segue identifier and set label to correct value
-        print ("segue.identifier = \(segue.identifier)")
+        // print ("segue.identifier = \(segue.identifier)")
     }
   
     
@@ -77,6 +76,9 @@ class ViewControllerQuestions: UIViewController {
             
         }
     }
+   
+   // let ViewControllerQuestions = UIView(frame: CGRectMake(0, 0, 640, 200))
+    //ViewControllerQuestions.backgroundColor = UIColor(patternImage: UIImage(named: "myImage")!)
     
 }
 

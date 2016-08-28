@@ -122,18 +122,18 @@
 			children = (
 				7AB1BD4E1CB0DC0400C1E7A0 /* resources */,
 				7A493EFA1C87FE1800B0534C /* AppDelegate.swift */,
+				7AB1BD4A1CB0C1E000C1E7A0 /* Answer.swift */,
+				7ACC1A131C913FF1006F9FDE /* Quiz.swift */,
+				7ACC1A111C913C07006F9FDE /* QuizManager.swift */,
+				7ADE72B31CB83EB800568F61 /* QuizUIButton.swift */,
 				7A493EFC1C87FE1800B0534C /* ViewControllerMain.swift */,
 				7A493F2B1C87FE9B00B0534C /* ViewControllerQuestions.swift */,
 				7ADE72B51CB998AC00568F61 /* ViewControllerScore.swift */,
+				7A493F061C87FE1800B0534C /* LaunchScreen.storyboard */,
 				7A493EFE1C87FE1800B0534C /* Main.storyboard */,
 				7A493F041C87FE1800B0534C /* Assets.xcassets */,
-				7A493F061C87FE1800B0534C /* LaunchScreen.storyboard */,
 				7A493F091C87FE1800B0534C /* Info.plist */,
 				7A493F011C87FE1800B0534C /* quiz_app.xcdatamodeld */,
-				7AB1BD4A1CB0C1E000C1E7A0 /* Answer.swift */,
-				7ACC1A111C913C07006F9FDE /* QuizManager.swift */,
-				7ACC1A131C913FF1006F9FDE /* Quiz.swift */,
-				7ADE72B31CB83EB800568F61 /* QuizUIButton.swift */,
 			);
 			path = "quiz-app";
 			sourceTree = "<group>";
@@ -518,6 +518,7 @@
 			baseConfigurationReference = 886D37FE99A30A0C1F2F9177 /* Pods-quiz-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "quiz-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.speedyunicorn.quiz-app";
@@ -530,6 +531,7 @@
 			baseConfigurationReference = A223EDBDABF843E12E70AFA3 /* Pods-quiz-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "quiz-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.speedyunicorn.quiz-app";

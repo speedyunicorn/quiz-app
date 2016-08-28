@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A304a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -21,34 +20,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axh-f1-8K1">
-                                <rect key="frame" x="262.5" y="211" width="75" height="30"/>
-                                <state key="normal" title="Easy Mode"/>
+                                <rect key="frame" x="259.5" y="268" width="80" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Easy Mode">
+                                    <color key="titleColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="xVm-Rw-9Rg" kind="showDetail" identifier="modeEasy" id="D3F-Yh-E2h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNy-Sh-5aK">
-                                <rect key="frame" x="253.5" y="291" width="93" height="30"/>
-                                <state key="normal" title="Normal Mode"/>
+                                <rect key="frame" x="250.5" y="350" width="98" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Normal Mode">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="xVm-Rw-9Rg" kind="showDetail" identifier="modeNormal" id="uVL-zA-E8K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2m-jT-WkY">
-                                <rect key="frame" x="262" y="371" width="76" height="30"/>
-                                <state key="normal" title="Hard Mode"/>
+                                <rect key="frame" x="259.5" y="432" width="81" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Hard Mode">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="xVm-Rw-9Rg" kind="showDetail" identifier="modeHard" id="Ta7-lQ-2Cv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Minecraft Quiz" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiU-Xi-9QY">
-                                <rect key="frame" x="229.5" y="70" width="141.5" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="217.5" y="120" width="165" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2576902626" green="0.77752711860000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Y2m-jT-WkY" firstAttribute="top" secondItem="aNy-Sh-5aK" secondAttribute="bottom" constant="50" id="4W9-8B-Qd4"/>
                             <constraint firstItem="aNy-Sh-5aK" firstAttribute="top" secondItem="axh-f1-8K1" secondAttribute="bottom" constant="50" id="5Gg-r8-b2y"/>
@@ -57,7 +65,7 @@
                             <constraint firstItem="axh-f1-8K1" firstAttribute="top" secondItem="eiU-Xi-9QY" secondAttribute="bottom" constant="100" id="abX-YG-pyU"/>
                             <constraint firstItem="eiU-Xi-9QY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g4Y-v4-ihX"/>
                             <constraint firstItem="aNy-Sh-5aK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ptn-up-81g"/>
-                            <constraint firstItem="eiU-Xi-9QY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="vro-u7-uNf"/>
+                            <constraint firstItem="eiU-Xi-9QY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="vro-u7-uNf"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -78,47 +86,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIu-nA-TQX">
-                                <rect key="frame" x="278.5" y="25" width="43.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="274" y="70" width="51.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3j-Ys-fp8">
                                 <rect key="frame" x="15" y="25" width="71" height="30"/>
-                                <state key="normal" title="&lt; Go Back"/>
+                                <state key="normal" title="&lt; Go Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="showDetail" identifier="backToMain" id="lFP-7H-RCf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYQ-cK-WA3" customClass="QuizUIButton" customModule="quiz_app" customModuleProvider="target">
-                                <rect key="frame" x="277" y="361.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="273" y="413" width="54" height="34"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="answerButtonTouched:" destination="xVm-Rw-9Rg" eventType="touchUpInside" id="qMX-Ol-Vgs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-xs-Ea4" customClass="QuizUIButton" customModule="quiz_app" customModuleProvider="target">
-                                <rect key="frame" x="277" y="441.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="273" y="497" width="54" height="34"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="answerButtonTouched:" destination="xVm-Rw-9Rg" eventType="touchUpInside" id="JuY-kd-3An"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOZ-nV-oCV" customClass="QuizUIButton" customModule="quiz_app" customModuleProvider="target">
-                                <rect key="frame" x="277" y="281.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="273" y="329" width="54" height="34"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="answerButtonTouched:" destination="xVm-Rw-9Rg" eventType="touchUpInside" id="f0e-Dt-Ezr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2i-iA-ZXI">
-                                <rect key="frame" x="138" y="96" width="325" height="135.5"/>
+                                <rect key="frame" x="138" y="144" width="325" height="135.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2576902626" green="0.77752711860000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zOZ-nV-oCV" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="42P-xC-f3U"/>
                             <constraint firstItem="eCv-xs-Ea4" firstAttribute="top" secondItem="xYQ-cK-WA3" secondAttribute="bottom" constant="50" id="7fQ-gG-oBX"/>
@@ -126,21 +153,15 @@
                             <constraint firstItem="qIu-nA-TQX" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="DIJ-zO-pkO"/>
                             <constraint firstItem="eCv-xs-Ea4" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="KgO-qg-vq6"/>
                             <constraint firstAttribute="leadingMargin" secondItem="v3j-Ys-fp8" secondAttribute="leading" constant="5" id="MDZ-jw-Fii"/>
-                            <constraint firstItem="w2i-iA-ZXI" firstAttribute="width" relation="greaterThanOrEqual" secondItem="gnr-Vu-LXv" secondAttribute="height" multiplier="7:100" constant="250" id="MMA-6p-FDu"/>
                             <constraint firstItem="w2i-iA-ZXI" firstAttribute="width" secondItem="gnr-Vu-LXv" secondAttribute="width" multiplier="1:8" constant="250" id="Qaq-tU-IvM"/>
                             <constraint firstItem="w2i-iA-ZXI" firstAttribute="height" secondItem="gnr-Vu-LXv" secondAttribute="height" multiplier="1:7" constant="50" id="abH-MG-u0P"/>
-                            <constraint firstItem="qIu-nA-TQX" firstAttribute="top" secondItem="hBd-a0-c0N" secondAttribute="bottom" constant="5" id="b7e-zU-TTS"/>
+                            <constraint firstItem="qIu-nA-TQX" firstAttribute="top" secondItem="hBd-a0-c0N" secondAttribute="bottom" constant="50" id="b7e-zU-TTS"/>
                             <constraint firstItem="xYQ-cK-WA3" firstAttribute="centerX" secondItem="gnr-Vu-LXv" secondAttribute="centerX" id="cTO-jt-Q9M"/>
                             <constraint firstItem="w2i-iA-ZXI" firstAttribute="top" secondItem="qIu-nA-TQX" secondAttribute="bottom" constant="50" id="oeN-Ut-avv"/>
                             <constraint firstItem="v3j-Ys-fp8" firstAttribute="top" secondItem="hBd-a0-c0N" secondAttribute="bottom" constant="5" id="pDb-Rk-ePD"/>
                             <constraint firstItem="xYQ-cK-WA3" firstAttribute="top" secondItem="zOZ-nV-oCV" secondAttribute="bottom" constant="50" id="swh-jR-4Gy"/>
                             <constraint firstItem="zOZ-nV-oCV" firstAttribute="top" secondItem="w2i-iA-ZXI" secondAttribute="bottom" constant="50" id="vZI-Et-M5X"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="MMA-6p-FDu"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="buttonAnswer0" destination="zOZ-nV-oCV" id="0DD-e9-NG4"/>
@@ -153,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bE0-I8-mXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072" y="941"/>
+            <point key="canvasLocation" x="1109" y="941"/>
         </scene>
         <!--View Controller Score-->
         <scene sceneID="rCm-Ll-nva">
@@ -169,19 +190,21 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTU-I0-kWC">
                                 <rect key="frame" x="15" y="25" width="71" height="30"/>
-                                <state key="normal" title="&lt; Go Back"/>
+                                <state key="normal" title="&lt; Go Back">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="showDetail" identifier="backToMain" id="qWL-8d-zHx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unJ-1W-SGN">
-                                <rect key="frame" x="0.5" y="170" width="600" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="0.5" y="170" width="600" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2576902626" green="0.77752711860000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UTU-I0-kWC" firstAttribute="top" secondItem="KKO-km-HHp" secondAttribute="bottom" constant="5" id="8Pd-Mo-rbH"/>
                             <constraint firstItem="unJ-1W-SGN" firstAttribute="top" secondItem="KKO-km-HHp" secondAttribute="bottom" constant="150" id="OqF-uf-ttm"/>
@@ -196,11 +219,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVn-P3-Pi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1696" y="941"/>
+            <point key="canvasLocation" x="1764" y="941"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qWL-8d-zHx"/>
         <segue reference="Ta7-lQ-2Cv"/>
+        <segue reference="lFP-7H-RCf"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

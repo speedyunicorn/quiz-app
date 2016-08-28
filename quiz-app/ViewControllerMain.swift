@@ -17,11 +17,15 @@ class ViewControllerMain: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print("viewDidLoad - ViewControllerMain..")
+        // print("viewDidLoad - ViewControllerMain..")
+        
+        // TODO - Reload all questions!
+        QuizManager.sharedQuizManager.initNewGame()
+        
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print ("segue.identifier = \(segue.identifier)")
+        // print ("segue.identifier = \(segue.identifier)")
         
         switch segue.identifier! {
             case "modeEasy":
@@ -33,8 +37,6 @@ class ViewControllerMain: UIViewController {
             default:
                 QuizManager.sharedQuizManager.setMode(QuizManager.Mode.Easy)
         }
-        
-        
     }
 
 

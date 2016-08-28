@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'quiz-app' do
 	pod 'ObjectMapper', '~> 1.2'
+    #    pod 'Google/Analytics'
 end
 
 target 'quiz-appTests' do

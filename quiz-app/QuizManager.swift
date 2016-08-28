@@ -25,7 +25,7 @@ class QuizManager {
     
     func setMode(mode: Mode) {
         self.currentMode = mode
-        print("currentMode = \(currentMode)")
+        // print("currentMode = \(currentMode)")
     }
     
     func getMode() -> Mode {
@@ -56,7 +56,7 @@ class QuizManager {
         var nextQuiz: Quiz?
         
         for index in 0...quizArray!.count - 1 {
-            print(quizArray![index].getMode())
+            // print(quizArray![index].getMode())
             if quizArray![index].getMode() == currentMode {
                 nextQuiz = quizArray![index]
                 quizArray!.removeAtIndex(index)

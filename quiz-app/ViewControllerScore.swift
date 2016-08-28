@@ -10,17 +10,11 @@ import UIKit
 import Foundation
 
 class ViewControllerScore: UIViewController {
-    //
     @IBOutlet weak var labelScore: UILabel!
    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         labelScore.text = "You got \(QuizManager.sharedQuizManager.getScore()) correct answer(s)!"
-        
-        QuizManager.sharedQuizManager.initNewGame()
-        
     }
- 
-    // "You got "/score" of the  questions right!"
 }
